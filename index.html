@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>gift</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== 礼物页面 ==================== -->
+  <div id="gift-page" class="page active">
+    <canvas id="bg-particles"></canvas>
+    <div class="gift-container" id="giftContainer">
+      <div class="gift-glow"></div>
+      <div class="gift-orb" id="giftOrb"></div>
+    </div>
+  </div>
+
+  <!-- ==================== 庆祝主页面 ==================== -->
+  <div id="celebration-page" class="page">
+    <div class="school-bg" id="schoolBg">
+      <img src="school-bg.png" alt="学校背景" class="school-bg-img">
+    </div>
+    <div class="bg-overlay"></div>
+    <canvas id="celebration-canvas"></canvas>
+    <div class="main-content">
+      <div class="photo-frame" id="photoFrame">
+        <div class="photo-glow"></div>
+        <img
+          src="photo.jpg"
+          alt="她的照片"
+          class="photo-img"
+          id="photoImg"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        >
+        <div class="photo-placeholder" style="display:none;">
+          <span class="placeholder-icon">🌸</span>
+          <span class="placeholder-text">在这里放入照片</span>
+        </div>
+      </div>
+      <div class="blessing-text" id="blessingText">
+        <h1 class="line-1" id="line1"></h1>
+        <p class="line-2" id="line2"></p>
+      </div>
+      <div class="sparkles" id="sparkles"></div>
+    </div>
+  </div>
+
+  <!-- ==================== 背景音乐 ==================== -->
+  <audio id="bgMusic" src="music.mp3" preload="auto" loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
